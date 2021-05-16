@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { request } = require('http');
 const path = require('path');
 
 module.exports = app =>{
@@ -30,7 +29,7 @@ module.exports = app =>{
             response.sendFile(path.join(__dirname, "../public/notes.html"));
         });
 
-        app.get('*', function(request, response){
+        app.get('/', function(request, response){
             response.sendFile(path.join(__dirname, "../public/index.html"));
         });
 
