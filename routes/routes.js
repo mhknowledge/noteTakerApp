@@ -15,14 +15,14 @@ module.exports = app =>{
             response.json(notes);
         });
         //api post
-        app.post("/apinotes", function(request, response){
+        app.post("/api/notes", function(request, response){
             let newItem = request.body;
             notes.push(newItem);
             updateDataBase();
             return console.log("Newest update: " + newItem.title);
         });
 
-        app.get("/api/notes/:id", function (resquest, response){
+        app.get("/api/notes/:id", function (request, response){
             response.json(notes[request.params.id]);
         });
 
