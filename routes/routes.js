@@ -29,7 +29,7 @@ module.exports = app =>{
             response.sendFile(path.join(__dirname, "../public/notes.html"));
         });
 
-        app.get('/', function(req, res){
+        app.get('*', function(req, res){
             response.sendFile(path.join(__dirname, "../public/index.html"));
         });
 
