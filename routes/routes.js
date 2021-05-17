@@ -10,7 +10,7 @@ module.exports = app =>{
         //set up code for routes:
 
         //api get
-        app.get("/api/notes", function(req, res{
+        app.get("/api/notes", function(req, res){
             response.json(notes);
         });
         //api post
@@ -44,7 +44,7 @@ module.exports = app =>{
     });
 
 
-
+}
 
 
 
